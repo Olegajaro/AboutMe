@@ -18,7 +18,7 @@ class LoginViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if (touches.first) != nil {
+        if touches.first != nil {
             view.endEditing(true)
         }
         super .touchesBegan(touches, with: event)
@@ -31,6 +31,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed() {
+        view.endEditing(true)
         if userNameTF.text == "Kenny" && passwordTF.text == "Qwerty" {
             performSegue(withIdentifier: "goToWelcomeView", sender: nil)
         } else {
