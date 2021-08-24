@@ -9,10 +9,13 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
+    
+    @IBOutlet var helloLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        helloLabel.text = "\u{270c}"
     }
 
 }
