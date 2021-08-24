@@ -134,6 +134,7 @@
                     </view>
                     <connections>
                         <outlet property="helloLabel" destination="0hU-po-A4M" id="4Hh-bi-kkM"/>
+                        <outlet property="welcomeTextLabel" destination="F1n-ee-AnE" id="4H6-2o-5K7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lif-sY-hsN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

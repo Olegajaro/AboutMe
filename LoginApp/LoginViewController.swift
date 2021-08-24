@@ -17,9 +17,17 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        
+        welcomeVC.welcomeText = "Welcome, \(userNameTF.text ?? "User")"
+    }
     
     @IBAction func loginButtonPressed() {
-        if userNameTF.text == "Kenny" && passwordTF.text == "Qwerty" {
+        let userNameText = userNameTF.text ?? ""
+        let passwordText = passwordTF.text ?? ""
+        
+        if userNameText == "Kenny" && passwordText == "Qwerty" {
             performSegue(withIdentifier: "goToWelcomeView", sender: nil)
         } else {
             showAlert(
