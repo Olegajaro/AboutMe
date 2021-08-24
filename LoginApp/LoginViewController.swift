@@ -17,6 +17,13 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if (touches.first) != nil {
+            view.endEditing(true)
+        }
+        super .touchesBegan(touches, with: event)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         
@@ -24,10 +31,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonPressed() {
-        let userNameText = userNameTF.text ?? ""
-        let passwordText = passwordTF.text ?? ""
-        
-        if userNameText == "Kenny" && passwordText == "Qwerty" {
+        if userNameTF.text == "Kenny" && passwordTF.text == "Qwerty" {
             performSegue(withIdentifier: "goToWelcomeView", sender: nil)
         } else {
             showAlert(
@@ -43,6 +47,13 @@ class LoginViewController: UIViewController {
     
     @IBAction func forgotPasswordButtonPressed() {
         showAlert(with: "Oops!", and: "Your Password is Qwerty \u{1f44c}")
+    }
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard segue.source is WelcomeViewController else { return }
+        
+        passwordTF.text = ""
+        userNameTF.text = ""
     }
     
     private func showAlert(with title: String, and message: String) {
