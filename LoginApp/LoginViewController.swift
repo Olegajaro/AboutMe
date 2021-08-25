@@ -12,12 +12,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         userNameTF.delegate = self
         passwordTF.delegate = self
+        
+        passwordTF.returnKeyType = .done
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -66,6 +67,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         if textField == userNameTF {
             textField.resignFirstResponder()
             passwordTF.becomeFirstResponder()
+        }
+        
+        if textField == passwordTF && passwordTF.text == "Qwerty" {
+            loginButtonPressed()
         }
         
         return true
