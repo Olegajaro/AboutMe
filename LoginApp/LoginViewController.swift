@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         
-        welcomeVC.welcomeText = "Welcome, \(userNameTF.text ?? "User")"
+        welcomeVC.welcomeText = "Welcome, \(userNameTF.text ?? "User")!"
     }
     
     @IBAction func loginButtonPressed() {
