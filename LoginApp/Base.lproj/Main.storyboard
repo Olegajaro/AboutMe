@@ -26,11 +26,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="e4H-qF-wjj"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ml0-8v-ahy">
                                                 <rect key="frame" x="0.0" y="53" width="240" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="VDw-fr-FXZ"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -40,6 +46,7 @@
                                         <state key="normal" title="Log In"/>
                                         <connections>
                                             <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZJ9-5r-OSu"/>
+                                            <segue destination="TDs-Vg-UpX" kind="presentation" identifier="showWelcomeView" modalPresentationStyle="fullScreen" id="RPk-xq-Rh6"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2q8-or-zse">
@@ -82,7 +89,6 @@
                     <connections>
                         <outlet property="passwordTF" destination="Ml0-8v-ahy" id="giP-yP-kfZ"/>
                         <outlet property="userNameTF" destination="Du4-2I-Bax" id="iaQ-vU-j9r"/>
-                        <segue destination="TDs-Vg-UpX" kind="presentation" identifier="goToWelcomeView" modalPresentationStyle="fullScreen" id="3Cs-a4-NUE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

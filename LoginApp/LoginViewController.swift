@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController {
 
     //MARK: - IB Outlets
     @IBOutlet var userNameTF: UITextField!
@@ -20,19 +20,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Navigation
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        userNameTF.delegate = self
-        passwordTF.delegate = self
-        
+
         passwordTF.returnKeyType = .done
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if touches.first != nil {
-            view.endEditing(true)
-        }
-        
-        super .touchesBegan(touches, with: event)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -43,11 +32,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - IBActions
     @IBAction func loginButtonPressed() {
-        view.endEditing(true)
-        
-        if userNameTF.text == user && passwordTF.text == password {
-            performSegue(withIdentifier: "goToWelcomeView", sender: nil)
-        } else {
+        if userNameTF.text != user || passwordTF.text != password {
             showAlert(
                 with: "Invalid login or password",
                 and: "Please, enter correct login and password"
@@ -64,33 +49,39 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
-        guard segue.source is WelcomeViewController else { return }
-        
         passwordTF.text = ""
         userNameTF.text = ""
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == userNameTF {
-            textField.resignFirstResponder()
-            passwordTF.becomeFirstResponder()
-        }
-        
-        if textField == passwordTF && passwordTF.text == "Qwerty" {
-            loginButtonPressed()
-        }
-        
-        return true
-    }
     
+}
+
+// MARK: - Private Methods
+extension LoginViewController {
     private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default) {
-            _ in self.passwordTF.text = ""
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.passwordTF.text = ""
         }
-            
         alert.addAction(okAction)
         present(alert, animated: true)
     }
 }
 
+// MARK: - UITextFieldDelegate
+extension LoginViewController: UITextFieldDelegate {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super .touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTF {
+            passwordTF.becomeFirstResponder()
+        } else {
+            loginButtonPressed()
+            performSegue(withIdentifier: "showWelcomeView", sender: nil)
+        }
+        return true
+    }
+}
