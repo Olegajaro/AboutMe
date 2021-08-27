@@ -5,4 +5,17 @@
 //  Created by Олег Федоров on 27.08.2021.
 //
 
-import Foundation
+struct User {
+    let login = "Kenny"
+    let password = "Qwerty"
+    let person: Person
+}
+
+struct Person {
+    let name = "Oleg"
+    let surname = "Fedorov"
+    let age = "27"
+    let myInterests = "Music and football"
+    let favoriteTeam = "ChelseaFC"
+}
+
