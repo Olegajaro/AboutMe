@@ -107,8 +107,8 @@
 		10F42ABB26D530A80051F4B9 /* LoginApp */ = {
 			isa = PBXGroup;
 			children = (
-				1030387A26D972B20008A646 /* Models */,
 				1030387926D972750008A646 /* ViewControllers */,
+				1030387A26D972B20008A646 /* Models */,
 				1030387826D9725E0008A646 /* Storyboards */,
 				1030387726D9723F0008A646 /* Resources */,
 				1030387626D972270008A646 /* App */,
