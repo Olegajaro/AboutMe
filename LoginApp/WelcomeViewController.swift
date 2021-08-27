@@ -19,7 +19,6 @@ class WelcomeViewController: UIViewController {
         
         welcomeTextLabel.text = welcomeText
         
-        helloLabel.text = "\u{270c}"
     }
 
 }
