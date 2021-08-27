@@ -9,9 +9,15 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
 
+    //MARK: - IB Outlets
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
+    // MARK: - Private properties
+    private let user = "Kenny"
+    private let password = "Qwerty"
+    
+    // MARK: - Navigation
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,13 +38,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         
-        welcomeVC.welcomeText = "Welcome, \(userNameTF.text ?? "User")!"
+        welcomeVC.user = user
     }
     
+    // MARK: - IBActions
     @IBAction func loginButtonPressed() {
         view.endEditing(true)
         
-        if userNameTF.text == "Kenny" && passwordTF.text == "Qwerty" {
+        if userNameTF.text == user && passwordTF.text == password {
             performSegue(withIdentifier: "goToWelcomeView", sender: nil)
         } else {
             showAlert(
@@ -49,11 +56,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func forgotUserNameButtonPressed() {
-        showAlert(with: "Oops!", and: "Your Name is Kenny ✌🏻")
+        showAlert(with: "Oops!", and: "Your Name is \(user) ✌🏻")
     }
     
     @IBAction func forgotPasswordButtonPressed() {
-        showAlert(with: "Oops!", and: "Your Password is Qwerty ✌🏻")
+        showAlert(with: "Oops!", and: "Your Password is \(password) ✌🏻")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
