@@ -49,11 +49,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func forgotUserNameButtonPressed() {
-        showAlert(with: "Oops!", and: "Your Name is Kenny \u{1f44c}")
+        showAlert(with: "Oops!", and: "Your Name is Kenny ✌🏻")
     }
     
     @IBAction func forgotPasswordButtonPressed() {
-        showAlert(with: "Oops!", and: "Your Password is Qwerty \u{1f44c}")
+        showAlert(with: "Oops!", and: "Your Password is Qwerty ✌🏻")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
