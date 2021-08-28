@@ -15,8 +15,9 @@ struct Person {
     let name = "Oleg"
     let surname = "Fedorov"
     let age = "27"
-    let myInterests = "Music and football"
+    let myInterests = "music and football"
     let favoriteTeam = "ChelseaFC"
+    let favoriteBands = "System of a Dawn, Korn, Sepultura"
 }
 
 let person = Person()

@@ -35,14 +35,9 @@ class LoginViewController: UIViewController {
             }
             else if let navigationVC = viewController as? UINavigationController {
                 let aboutUserVC = navigationVC.topViewController as! AboutUserViewController
-                
                 aboutUserVC.name = "\(oleg.person.name) \(oleg.person.surname)"
             }
         }
-        
-//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        
-//        welcomeVC.user = "\(oleg.person.name) \(oleg.person.surname)"
     }
     
     // MARK: - IBActions
