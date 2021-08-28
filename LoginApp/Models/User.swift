@@ -9,6 +9,7 @@ struct User {
     let login = "Kenny"
     let password = "Qwerty"
     let person: Person
+
 }
 
 struct Person {
