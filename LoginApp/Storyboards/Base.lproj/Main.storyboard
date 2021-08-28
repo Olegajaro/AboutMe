@@ -168,6 +168,9 @@
                         <color key="backgroundColor" red="0.15569196428571427" green="0.73570365646258506" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="User" id="d6G-1p-QOp"/>
+                    <connections>
+                        <outlet property="userName" destination="d6G-1p-QOp" id="vUI-vU-fYu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3zN-v7-hDi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

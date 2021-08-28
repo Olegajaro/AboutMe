@@ -33,6 +33,11 @@ class LoginViewController: UIViewController {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.user = "\(oleg.person.name) \(oleg.person.surname)"
             }
+            else if let navigationVC = viewController as? UINavigationController {
+                let aboutUserVC = navigationVC.topViewController as! AboutUserViewController
+                
+                aboutUserVC.name = "\(oleg.person.name) \(oleg.person.surname)"
+            }
         }
         
 //        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
