@@ -157,7 +157,7 @@
             </objects>
             <point key="canvasLocation" x="2520" y="75"/>
         </scene>
-        <!--About User View Controller-->
+        <!--User-->
         <scene sceneID="LZ8-nD-Qmn">
             <objects>
                 <viewController id="YjZ-AG-sJQ" customClass="AboutUserViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -165,9 +165,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="icT-3B-hL3"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.15569196428571427" green="0.73570365646258506" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="d6G-1p-QOp"/>
+                    <navigationItem key="navigationItem" title="User" id="d6G-1p-QOp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3zN-v7-hDi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,6 +201,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CEA-UR-cOH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -215,9 +218,6 @@
     <resources>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
