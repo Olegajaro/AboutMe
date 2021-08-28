@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="2520" y="75"/>
         </scene>
-        <!--View Controller-->
+        <!--About User View Controller-->
         <scene sceneID="LZ8-nD-Qmn">
             <objects>
-                <viewController id="YjZ-AG-sJQ" sceneMemberID="viewController">
+                <viewController id="YjZ-AG-sJQ" customClass="AboutUserViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aVe-V8-2pQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,6 +179,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="SX4-R9-ROb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pTq-TJ-qd7">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -191,11 +192,11 @@
             </objects>
             <point key="canvasLocation" x="1725" y="75"/>
         </scene>
-        <!--AboutMe-->
+        <!--User-->
         <scene sceneID="Clq-6V-YaY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jUv-Bu-PXu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="AboutMe" image="person.fill" catalog="system" id="htA-fC-F0k"/>
+                    <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="htA-fC-F0k"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CEA-UR-cOH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

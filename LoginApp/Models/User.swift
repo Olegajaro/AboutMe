@@ -19,3 +19,7 @@ struct Person {
     let favoriteTeam = "ChelseaFC"
 }
 
+let person = Person()
+let oleg = User(person: person)
+
+

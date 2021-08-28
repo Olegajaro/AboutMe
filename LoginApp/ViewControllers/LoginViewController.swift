@@ -14,8 +14,8 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     // MARK: - Private properties
-    private let user = "Kenny"
-    private let password = "Qwerty"
+    private let user = oleg.login
+    private let password = oleg.password
     
     // MARK: - Navigation
     override func viewDidLoad() {
@@ -25,9 +25,19 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        let tabBarController = segue.destination as! UITabBarController
+
+        let viewControllers: [UIViewController] = tabBarController.viewControllers ?? []
+    
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = "\(oleg.person.name) \(oleg.person.surname)"
+            }
+        }
         
-        welcomeVC.user = user
+//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        
+//        welcomeVC.user = "\(oleg.person.name) \(oleg.person.surname)"
     }
     
     // MARK: - IBActions
