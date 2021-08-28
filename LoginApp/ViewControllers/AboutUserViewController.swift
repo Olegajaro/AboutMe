@@ -24,7 +24,7 @@ class AboutUserViewController: UIViewController {
         userName.title = name
         
         ageLabel.text = "Age: \(oleg.person.age)"
-        interestsLabel.text = "Interests: \(oleg.person.myInterests)"
+        interestsLabel.text = "Interests: \(oleg.person.interests)"
         footballTeamLabel.text = "Favorite football team: \(oleg.person.favoriteTeam)"
         bandsLabel.text = "Favorite bands: \(oleg.person.favoriteBands)"
     }
