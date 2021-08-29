@@ -28,5 +28,4 @@ class AboutUserViewController: UIViewController {
         footballTeamLabel.text = "Favorite football team: \(oleg.person.favoriteTeam)"
         bandsLabel.text = "Favorite bands: \(oleg.person.favoriteBands)"
     }
-
 }
