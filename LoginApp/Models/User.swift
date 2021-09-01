@@ -6,23 +6,45 @@
 //
 
 struct User {
-    let login = "Kenny"
-    let password = "Qwerty"
+    let login: String
+    let password: String
     let person: Person
+    
+    static func getUserData() -> User {
+        User(
+            login: "Kenny",
+            password: "Qwerty",
+            person: Person.getPerson()
+        )
+    }
 
 }
 
 struct Person {
-    let name = "Oleg"
-    let surname = "Fedorov"
-    let age = "27"
-    let interests = "music and football"
-    let favoriteTeam = "ChelseaFC"
-    let favoriteBands = "System of a Dawn, Korn, Sepultura"
+    let name: String
+    let surname: String
+    let age: String
+    let interests: String
+    let favoriteTeam: String
+    let favoriteBands: String
+    let image: String
+    
+    var fullName: String {
+        "\(name) \(surname)"
+    }
+    
+    static func getPerson() -> Person {
+        Person(
+            name: "Oleg",
+            surname: "Fedorov",
+            age: "27",
+            interests: "music and football",
+            favoriteTeam: "ChelseaFC",
+            favoriteBands: "System of a Dawn, Korn, Sepultura",
+            image: "Cat")
+    }
 }
 
-let person = Person()
-let oleg = User(person: person)
 
 
 

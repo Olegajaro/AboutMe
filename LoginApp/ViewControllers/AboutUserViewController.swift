@@ -16,16 +16,16 @@ class AboutUserViewController: UIViewController {
     @IBOutlet var footballTeamLabel: UILabel!
     @IBOutlet var bandsLabel: UILabel!
     
-    var name = ""
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userName.title = name
+        title = user.person.fullName
         
-        ageLabel.text = "Age: \(oleg.person.age)"
-        interestsLabel.text = "Interests: \(oleg.person.interests)"
-        footballTeamLabel.text = "Favorite football team: \(oleg.person.favoriteTeam)"
-        bandsLabel.text = "Favorite bands: \(oleg.person.favoriteBands)"
+        ageLabel.text = "Age: \(user.person.age)"
+        interestsLabel.text = "Interests: \(user.person.interests)"
+        footballTeamLabel.text = "Favorite football team: \(user.person.favoriteTeam)"
+        bandsLabel.text = "Favorite bands: \(user.person.favoriteBands)"
     }
 }
