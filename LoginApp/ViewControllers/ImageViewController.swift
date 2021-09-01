@@ -11,7 +11,7 @@ class ImageViewController: UIViewController {
 
     @IBOutlet var userImage: UIImageView! {
         didSet {
-            userImage.layer.cornerRadius = 15
+            userImage.layer.cornerRadius = 45
         }
     }
     
