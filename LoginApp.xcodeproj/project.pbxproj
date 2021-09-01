@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1022407E26DA58C40007B377 /* AboutUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1022407D26DA58C40007B377 /* AboutUserViewController.swift */; };
 		1030387C26D972CC0008A646 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1030387B26D972CC0008A646 /* User.swift */; };
+		10B9FFC826DFF08D000208DC /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B9FFC726DFF08D000208DC /* ImageViewController.swift */; };
 		10F42ABD26D530A80051F4B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F42ABC26D530A80051F4B9 /* AppDelegate.swift */; };
 		10F42ABF26D530A80051F4B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F42ABE26D530A80051F4B9 /* SceneDelegate.swift */; };
 		10F42AC126D530A80051F4B9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F42AC026D530A80051F4B9 /* LoginViewController.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		1022407D26DA58C40007B377 /* AboutUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUserViewController.swift; sourceTree = "<group>"; };
 		1030387B26D972CC0008A646 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		10B9FFC726DFF08D000208DC /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		10F42AB926D530A80051F4B9 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10F42ABC26D530A80051F4B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10F42ABE26D530A80051F4B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				10F42AC026D530A80051F4B9 /* LoginViewController.swift */,
 				10F42AD226D531880051F4B9 /* WelcomeViewController.swift */,
 				1022407D26DA58C40007B377 /* AboutUserViewController.swift */,
+				10B9FFC726DFF08D000208DC /* ImageViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				10F42AC126D530A80051F4B9 /* LoginViewController.swift in Sources */,
 				10F42AD326D531880051F4B9 /* WelcomeViewController.swift in Sources */,
 				10F42ABD26D530A80051F4B9 /* AppDelegate.swift in Sources */,
+				10B9FFC826DFF08D000208DC /* ImageViewController.swift in Sources */,
 				1030387C26D972CC0008A646 /* User.swift in Sources */,
 				1022407E26DA58C40007B377 /* AboutUserViewController.swift in Sources */,
 				10F42ABF26D530A80051F4B9 /* SceneDelegate.swift in Sources */,
